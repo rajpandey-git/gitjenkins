@@ -18,7 +18,7 @@
        state: touch
   - name: Clone git to a local server
     git:
-      repo: https://github.com/rajpandey-git/gitjenkins.git
+      repo: https://github.com/rajpandey-git/pythoncode.git
       dest: /home/nyadaur/
       clone: yes
       update: yes
