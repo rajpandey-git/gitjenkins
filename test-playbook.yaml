@@ -14,6 +14,6 @@
        state: started
   - name: Create a directoy
     file:
-       path: /home/ec2-user/ansible-playbooks/test.txt
+       path: /home/nyadaur/test.txt
        state: touch
 
