@@ -19,4 +19,6 @@
   - name: Clone git to a local server
     git:
       repo: https://github.com/rajpandey-git/gitjenkins.git
-      dest: /home/nyadaur
+      dest: /home/nyadaur/
+      clone: yes
+      update: yes
