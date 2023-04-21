@@ -19,6 +19,6 @@
   - name: Clone git to a local server
     git:
       repo: https://github.com/rajpandey-git/pythoncode.git
-      dest: /home/nyadaur/
+      dest: /home/nyadaur/nyanyadaur/
       clone: yes
       update: yes
