@@ -1,6 +1,6 @@
 ---
 - name: Installing htpd service on the server
-  hosts: localhost
+  hosts: webserver
   become: yes
   tasks:
   - name: installing httpd
