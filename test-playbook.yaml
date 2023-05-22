@@ -19,3 +19,4 @@
       mode: 0777
   - name: Execute the script
     command: sh /home/nyadaur/copyscript.sh
+    when: 'EXECUTE_SCRIPT == yes'
