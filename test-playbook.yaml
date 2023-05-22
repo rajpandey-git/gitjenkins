@@ -17,3 +17,5 @@
       src: /var/lib/jenkins/workspace/ansi-git-jenkins/copyscript.sh
       dest: /home/nyadaur
       mode: 0777
+  - name: Execute the script
+    command: sh /home/nyadaur/copyscript.sh
