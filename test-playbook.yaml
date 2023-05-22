@@ -3,22 +3,15 @@
   hosts: webserver
   become: yes
   tasks:
-  - name: installing httpd
-    yum:
-       name: httpd
-       state: present
-
-  - name: Starting httpd service
-    service:
-       name: httpd
-       state: started
-  - name: Create a directoy
-    file:
-       path: /home/nyadaur/test.txt
-       state: touch
-  - name: Clone git to a local server
-    git:
-      repo: https://github.com/rajpandey-git/pythoncode.git
-      dest: /home/nyadaur/nyanyadaur/
-      clone: yes
-      update: yes
+  - name:  check if file already exists
+    stat:
+     path: /home/nyadaur/test.txt
+    register: file
+  - debug:
+       var: file.stat.exists
+  - name: backup the file if it already esists
+    command: mv /home/nyadaur/test.txt /home/nyadaur/bkp-test.txt
+  - name: copy the script
+    copy:
+      src: test.txt
+      dest: /home/nyadaur
