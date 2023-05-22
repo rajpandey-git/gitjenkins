@@ -14,5 +14,5 @@
     when: file.stat.exists
   - name: copy the script
     copy:
-      src: /home/ec2-user/ansible-playbooks
+      src: /var/lib/jenkins/workspace/ansi-git-jenkins/test.txt
       dest: /home/nyadaur
