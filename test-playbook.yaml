@@ -5,14 +5,15 @@
   tasks:
   - name:  check if file already exists
     stat:
-     path: /home/nyadaur/test.txt
+     path: /home/nyadaur/copyscript.sh
     register: file
   - debug:
        var: file.stat.exists
   - name: backup the file if it already esists
-    command: mv /home/nyadaur/test.txt /home/nyadaur/bkp-test.txt
+    command: mv /home/nyadaur/copyscript.sh /home/nyadaur/bkp-copyscript.sh
     when: file.stat.exists
   - name: copy the script
     copy:
-      src: /var/lib/jenkins/workspace/ansi-git-jenkins/test.txt
+      src: /var/lib/jenkins/workspace/ansi-git-jenkins/copyscript.sh
       dest: /home/nyadaur
+      mode: 0777
