@@ -11,6 +11,7 @@
        var: file.stat.exists
   - name: backup the file if it already esists
     command: mv /home/nyadaur/test.txt /home/nyadaur/bkp-test.txt
+    when: file.stat.exists
   - name: copy the script
     copy:
       src: test.txt
