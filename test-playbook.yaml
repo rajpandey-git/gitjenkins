@@ -1,5 +1,5 @@
 ---
-- name: Installing htpd service on the server
+- name: Checkinga and copying the file on server
   hosts: webserver
   become: yes
   tasks:
