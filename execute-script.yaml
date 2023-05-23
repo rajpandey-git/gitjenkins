@@ -4,7 +4,7 @@
    become: yes
    tasks:
    - name: Execute the script
-     command: sh /home/nyadaur/copyscript.sh
+     command: "{{command_execute_script}}"
    - name: echo the success
      command: echo 'script executed successfully'
     # when: "{{EXECUTE_SCRIPT}} == yes"
