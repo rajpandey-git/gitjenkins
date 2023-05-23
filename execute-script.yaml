@@ -1,0 +1,9 @@
+---
+ - name: Installing htpd service on the server
+   hosts: webserver
+   become: yes
+   tasks:
+   - name: Execute the script
+     command: sh /home/nyadaur/copyscript.sh
+     when: 'EXECUTE_SCRIPT == yes'
+
