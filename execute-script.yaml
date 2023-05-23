@@ -6,6 +6,6 @@
    - name: Execute the script
      command: sh /home/nyadaur/copyscript.sh
    - name: echo the success
-     command: sh echo 'script executed successfully'
+     command: echo 'script executed successfully'
     # when: "{{EXECUTE_SCRIPT}} == yes"
 
